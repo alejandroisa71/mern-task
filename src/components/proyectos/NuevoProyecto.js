@@ -1,6 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
 const NuevoProyecto = () => {
+  //State para proyecto
+  const [proyecto, guardarProyecto] = useState({
+    nombre: "",
+  });
+
+  //Extraer Nombre de Proyecto
+  const { nombre } = proyecto;
+
+  const onChangeProyecto = (e) => {
+    guardarProyecto({
+      ...proyecto,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   return (
     <>
       <button type="button" className="btn btn-block btn-primario">
@@ -13,6 +28,8 @@ const NuevoProyecto = () => {
           className="input-text"
           placeholder="Nombre Proyecto"
           name="nombre"
+          value={nombre}
+          onChange={onChangeProyecto}
         />
         <input
           type="submit"
