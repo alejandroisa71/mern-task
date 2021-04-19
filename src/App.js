@@ -4,7 +4,7 @@ import Login from "./components/auth/Login";
 import NuevaCuenta from "./components/auth/NuevaCuenta";
 import Proyectos from "./components/proyectos/Proyectos";
 
-import ProyectoState from './context/proyectos/proyectoState'
+import ProyectoState from "./context/proyectos/proyectoState";
 
 function App() {
   return (
