@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import Tarea from "./Tarea";
+import proyectoContext from "../../context/proyectos/proyectoContext";
 
 const ListadoTareas = () => {
+  //Extraer Proyectos de state inicial
+  const proyectosContext = useContext(proyectoContext);
+  const { proyecto } = proyectosContext;
+
   const tareasProyecto = [
     { nombre: "Elegir Plataforma", estado: true },
     { nombre: "Elegir Colores", estado: false },
