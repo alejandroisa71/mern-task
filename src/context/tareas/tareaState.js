@@ -1,5 +1,5 @@
 import React, { useReducer } from "react";
-import tareaContext from "./tareaContext";
+import TareaContext from "./tareaContext";
 import TareaReducer from "./tareaReducer";
 
 import { TAREAS_PROYECTO, AGREGAR_TAREA, VALIDAR_TAREA } from "../../types";
@@ -54,18 +54,18 @@ const TareaState = (props) => {
   };
 
   return (
-    <tareaContext.Provider
+    <TareaContext.Provider
       value={{
         tareas: state.tareas,
         tareasproyecto: state.tareasproyecto,
-        errorTarea: state.errortarea,
+        errortarea: state.errortarea,
         obtenerTareas,
         agregarTarea,
         validarTarea,
       }}
     >
       {props.children}
-    </tareaContext.Provider>
+    </TareaContext.Provider>
   );
 };
 

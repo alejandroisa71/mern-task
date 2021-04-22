@@ -10,10 +10,10 @@ const FormTarea = () => {
   //Obtener la funcion del context de tarea
   const tareasContext = useContext(tareaContext);
   const {
-    errortarea,
     agregarTarea,
     validarTarea,
     obtenerTareas,
+    errortarea,
   } = tareasContext;
 
   //state del formulario
@@ -26,7 +26,6 @@ const FormTarea = () => {
 
   //leer los valores del formulario
   const handleChange = (e) => {
-    console.log(e.target.value);
     guardarTarea({
       ...tarea,
       [e.target.name]: e.target.value,
@@ -83,6 +82,7 @@ const FormTarea = () => {
           />
         </div>
       </form>
+
       {errortarea ? (
         <p className="mensaje error">El nombre de la tarea es obligatorio</p>
       ) : null}
