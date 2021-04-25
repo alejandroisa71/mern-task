@@ -10,10 +10,10 @@ const FormTarea = () => {
   //Obtener la funcion del context de tarea
   const tareasContext = useContext(tareaContext);
   const {
+    errortarea,
     agregarTarea,
     validarTarea,
     obtenerTareas,
-    errortarea,
   } = tareasContext;
 
   //state del formulario
