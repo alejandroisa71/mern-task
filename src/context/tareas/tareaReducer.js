@@ -6,8 +6,10 @@ import {
   ESTADO_TAREA,
   TAREA_ACTUAL,
   ACTUALIZAR_TAREA,
+  LIMPIAR_TAREA,
 } from "../../types";
 
+// eslint-disable-next-line
 export default (state, action) => {
   switch (action.type) {
     case TAREAS_PROYECTO:
@@ -49,6 +51,12 @@ export default (state, action) => {
       return {
         ...state,
         tareaseleccionada: action.payload,
+      };
+    }
+    case LIMPIAR_TAREA: {
+      return {
+        ...state,
+        tareaseleccionada: null,
       };
     }
     default:
