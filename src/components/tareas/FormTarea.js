@@ -100,7 +100,7 @@ const FormTarea = () => {
           <input
             type="submit"
             className=" btn btn-primario btn-submit btn-block"
-            value={tareaseleccionada ? "Guardar Tarea" : "Agregar Tarea"}
+            value={tareaseleccionada ? "Editar Tarea" : "Agregar Tarea"}
           />
         </div>
       </form>
